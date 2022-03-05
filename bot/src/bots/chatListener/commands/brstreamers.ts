@@ -1,6 +1,6 @@
 import https from "https";
-import request from "../../../helper/request";
-import { getTimeNow } from "../../../helper/time";
+import request from "../../../helpers/request";
+import { getTimeNow } from "../../../helpers/time";
 import { CommandType } from "../chatListener";
 
 const httpsAgent = new https.Agent({
