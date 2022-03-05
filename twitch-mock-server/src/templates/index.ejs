@@ -1,0 +1,25 @@
+<script>
+  const getRandomNumber = (min, max) =>
+    Math.round(Math.random() * (max - min) + min);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const refreshTime = `<%= refreshTime %>`;
+    setTimeout(() => {
+      window.location = "/<%= nextChannel %>?referrer=raid";
+    }, refreshTime * 1000);
+
+    const generateViewerCount = (node) => {
+      node.innerHTML = Math.round(Math.random() * 100 - 0) + 0;
+    };
+
+    const viewerCountNode = document.createElement("span");
+    viewerCountNode.dataset.aTarget = "animated-channel-viewers-count";
+    generateViewerCount(viewerCountNode);
+    document.querySelector("h4").appendChild(viewerCountNode);
+
+    setInterval(() => generateViewerCount(viewerCountNode), 500);
+  });
+</script>
+<h2>Channel: <%= channel %></h2>
+<h3>Raid in: <%= refreshTime %>s</h3>
+<h4>Viewers:</h4>

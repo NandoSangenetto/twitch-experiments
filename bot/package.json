@@ -1,0 +1,36 @@
+{
+  "name": "twbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon",
+    "start": "npm run build && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/puppeteer": "^5.4.5",
+    "colors": "^1.4.0",
+    "commander": "^9.0.0",
+    "dotenv": "^16.0.0",
+    "inquirer": "^8.2.0",
+    "node-fetch": "^2.6.7",
+    "pad": "^3.2.0",
+    "puppeteer": "^13.4.1"
+  },
+  "devDependencies": {
+    "@types/colors": "^1.2.1",
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "^8.2.0",
+    "@types/node": "^17.0.21",
+    "@types/node-fetch": "^2.6.1",
+    "@types/pad": "^2.1.0",
+    "@types/ws": "^8.5.2",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.6.0"
+  }
+}
