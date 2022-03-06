@@ -29,7 +29,7 @@ const RULES: RulesType = [
     function: commandTeAmo,
   },
   {
-    test: (message) => message.includes("brstreamers"),
+    test: (message) => message.includes("ping brstreamers"),
     function: commandBr,
   },
   {
