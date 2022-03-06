@@ -1,4 +1,5 @@
 import https from "https";
+import colors from "colors";
 import request from "../../../helpers/request";
 import { getTimeNow } from "../../../helpers/time";
 import { CommandType } from "../chatListener";
@@ -15,17 +16,18 @@ const brStreamer = async () => {
     });
     const end = getTimeNow();
     return end - start;
-  } catch (e) {
+  } catch (error) {
+    console.log(error);
+
     return null;
   }
 };
 
 const commandBr = async ({ client, channel, username }: CommandType) => {
   const br = await brStreamer();
-  console.log(br);
   if (br) {
-    const t = `PRIVMSG #${channel} :@${username} Acredita? O BrStreamers.Dev está online com ${br}ms.`;
-    client.send(t);
+    const msg = `PRIVMSG #${channel} :@${username} Acredita? O BrStreamers.Dev está online com ${br}ms.`;
+    client.send(msg);
   } else {
     client.send(`PRIVMSG #${channel} :@${username} Ixi. Tá off.`);
   }
