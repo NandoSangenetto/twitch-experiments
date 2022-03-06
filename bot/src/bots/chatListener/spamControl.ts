@@ -1,4 +1,4 @@
-import { getTimeNow } from "../../helper/time";
+import { getTimeNow } from "../../helpers/time";
 import {
   SPAM_MAX_MSG,
   SPAM_CHECK_SECONDS,

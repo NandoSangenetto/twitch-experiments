@@ -1,6 +1,6 @@
 import https from "https";
 import puppeteer, { Puppeteer } from "puppeteer";
-import request from "../../helper/request";
+import request from "../../helpers/request";
 
 const TWITCH_REGEX =
   process.env.NODE_ENV === "testing"

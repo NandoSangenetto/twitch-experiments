@@ -1,4 +1,4 @@
-import { getRandomNumber } from "../../../helper/number";
+import { getRandomNumber } from "../../../helpers/number";
 import { CommandType } from "../chatListener";
 
 const commandRico = ({ client, channel, username }: CommandType) => {
